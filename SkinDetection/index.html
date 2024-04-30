@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Popup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="content-container">
+        <h1>Dr.Derma</h1>
+        <p>
+          Welcome to Dr.Derma, a place where people can check over the possible skin disease they may be suffering from based on the images of the affected skin area
+        </p>
+        <button class="cta-btn" id="open">Provide Details</button>
+      </div>
+    </header>
+
+    <section class="modal-container" id="modal">
+      <section class="modal">
+        <button class="close-btn" id="close">x</button>
+        <div class="modal-content">
+          <h1>Details</h1>
+          <form class="modal-form">
+            <div>
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    class="form-input"
+                />
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  placeholder="Enter Age"
+                  class="form-input"
+                />
+            </div>
+            <div>
+                <label for="Select gender">Select gender</label>
+                <label><input type="radio" name="gender" value="Male" ngModel>Male</label>
+                <label><input type="radio" name="gender" value="Female" ngModel>Female</label>
+                <label><input type="radio" name="gender" value="Others" ngModel>Others</label>
+            </div>
+
+            <div>
+                <label for="phone">Phone Number</label>
+                <input name="phone" id="phone" type="tel">
+                
+            </div>
+            <div>
+              <label for="file">Select Image File of the infected places</label>
+              <input
+                type="file"
+                id="file"
+                placeholder="Select file"
+                class="form-input"
+                accept="image/*"
+              />
+            </div>
+            <div>
+                <label for="textarea">Symptoms you feel></label>
+                <textarea id="textarea" name="textarea"></textarea>
+              </div>
+            <input type="submit" value="Submit" class="submit-btn" />
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
